@@ -1,10 +1,13 @@
+#include "main.h"
 #include <stdio.h>
+
 /**
  * main - prints all args content
  * @argc: argument count
  * @argv: argument vector
  * Return: Always zero
  */
+
 int main(int argc, char *argv[])
 {
 	int i;
