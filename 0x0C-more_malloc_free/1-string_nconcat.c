@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * string_nconcat - ...
- * @s1: ...
- * @s2: ...
- * @n...
+ * string_nconcat - concentates n bytes of a string
+ * @s1: string to append to
+ * @s2: atring to concentates from
+ * @n: number of bytes from s2 to concentate to s1
  *
- * Return: ...
+ * Return: pointer to resulting string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
