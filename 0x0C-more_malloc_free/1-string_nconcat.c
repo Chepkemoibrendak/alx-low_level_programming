@@ -2,50 +2,36 @@
 #include <stdlib.h>
 
 /**
- * string_nconcat - concatenate s1 and n bytes of s2; return pointer to string.
- * @s1: string 1
- * @s2: string 2
- * @n: n bytes to concat from string 2
- * Return:
+ *  *string_nconcat - a program that concatenates two strings.
+ *   *@s1: the first character
+ *    *@s2: the second character
+ *     *@n: the integer that has been unsigned
+ *      *Return: the pointer to resulting string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i = 0, j = 0, k = 0, l = 0;
-	char *str;
+char *m;
+unsigned int x = 0, y = 0, num1 = 0, num2 = 0;
 
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-
-	while (s1[i])
-		i++;
-
-	while (s2[k])
-		k++;
-
-	if (n >= k)
-		l = i + k;
-	else
-		l = i + n;
-
-	str = malloc(sizeof(char) * l + 1);
-	if (str == NULL)
-		return (NULL);
-
-	k = 0;
-	while (j < l)
-	{
-		if (j <= i)
-			str[j] = s1[j];
-
-		if (j >= i)
-		{
-			str[j] = s2[k];
-			k++;
-		}
-		j++;
-	}
-	str[j] = '\0';
-	return (str);
+while (s1 && s1[num1])
+num1++;
+while (s2 && s2[num2])
+num2++;
+if (n < num2)
+m = malloc(sizeof(char) * (num1 + n + 1));
+else
+m = malloc(sizeof(char) * (num1 + num2 + 1));
+if (!m)
+return (NULL);
+while (x < num1)
+{
+m[x] = s1[x];
+x++;
+}
+while (n < num2 && x < (num1 + n))
+m[x++] = s2[y++];
+while (n >= num2 && x < (num1 + num2))
+m[x++] = s2[y++];
+m[x] = '\0';
+return (m);
 }
