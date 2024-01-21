@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
  *  * main - entry point
@@ -22,6 +24,7 @@ if (c / 10 != 9 || c % 10 != 8)
 {
 putchar(44);
 putchar(32);
+}
 }
 }
 
