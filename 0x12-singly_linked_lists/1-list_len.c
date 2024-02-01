@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * list_len - gets the number of nodes
+ * list_len - gets the number of nodes.
  *
  * @h: pointer to the head (first node)
  *
