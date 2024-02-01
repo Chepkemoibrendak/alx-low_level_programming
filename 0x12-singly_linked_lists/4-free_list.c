@@ -3,7 +3,7 @@
 /**
  * free_list - free single list link
  *
- * @head: pointer to the first node of the list
+ * @head: pointer to the first node of  list
  *
  * Return: nothing
 */
